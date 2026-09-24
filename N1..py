@@ -1,6 +1,8 @@
 #1.
-print("Привет, Python!")
-print("Hello, Python!")
-print("Bonjour Python!")
-print("Hej, Python!")
-print("Hola, Python!")
+print("какие два слова передал первой радиограммой Александр Попов?")
+word_1 = input("Первое слово: ")
+word_2 = input("второе слово: ")
+if word_1 == "генрих" and word_2 == "герц":
+    print("верно")
+else:
+    print("неверно")

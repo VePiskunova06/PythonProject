@@ -1,5 +1,7 @@
 #6.
-name = input("Как Вас зовут? ")
-print(f"Здравствуйте, {name}")
-hobby = input("Что Вам нравится? ")
-print(f"Отлично! {hobby} - хорошее увлечение.")
+year = int(input())
+
+if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
+    print(366)
+else:
+    print(365)

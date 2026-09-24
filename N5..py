@@ -1,2 +1,10 @@
 #5.
-print("Привет, Python!\nHello, Python!\nBonjour Python!\nHej, Python!\nHola, Python!")
+kirill, arina, sergey = map(int, input().split())
+best = kirill
+if arina > best:
+    best = arina
+
+if sergey > best:
+    best = sergey
+
+print(best)

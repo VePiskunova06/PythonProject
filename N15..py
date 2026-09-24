@@ -1,8 +1,6 @@
 #15.
-wives = 7
-bags = wives * 7
-cats = bags * 7
-kittens = cats * 7
+N, K, M = map(int, input().split())
+forward = abs(M - K)
 
-total = 1 + 1 + wives + cats + kittens
-print(total)
+backward = N - forward
+print(min(forward, backward))

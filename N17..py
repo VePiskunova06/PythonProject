@@ -1,6 +1,7 @@
 #17.
-weight = float(input())
-height = float(input())
+A, B = map(int, input().split("x"))
 
-bmi = (weight * 703) / (height ** 2)
-print(f"{bmi:.2f}")
+if A ** 2 + B ** 2 <= 13 ** 2:
+    print("да")
+else:
+    print("нет")

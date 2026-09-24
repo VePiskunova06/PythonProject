@@ -1,11 +1,22 @@
 #13.
-cm = float(input())
-inches = cm / 2.54
-feet = inches / 12
-yards = feet / 3
-miles = yards / 1760
+height = float(input())
+weight = float(input())
 
-print(f"{yards} ярдов")
-print(f"{miles} мили")
-print(f"{feet} футов")
-print(f"{inches} дюймов")
+height = height / 100
+
+bmi = weight / (height ** 2)
+
+if bmi < 16:
+    print("выраженный дефицит массы тела")
+elif bmi < 18.5:
+    print("недостаточная масса тела")
+elif bmi < 25:
+    print("норма")
+elif bmi < 30:
+    print("избыточная масса тела")
+elif bmi < 35:
+    print("ожирение первой степени")
+elif bmi < 40:
+    print("ожирение второй степени")
+else:
+    print("ожирение третьей степени")

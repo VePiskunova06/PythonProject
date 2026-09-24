@@ -1,5 +1,11 @@
 #7.
-login = input("Login: ")
-password = input("Password: ")
-new_password = input("New password: ")
-print(f"User {login} has changed the password to {new_password}")
+n = int(input())
+a = n // 1000
+b = n // 100 % 10
+c = n // 10 % 10
+d = n % 10
+
+if a == d and b == c:
+    print("настоящее")
+else:
+    print("кривое")

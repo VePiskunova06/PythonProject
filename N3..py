@@ -1,3 +1,6 @@
 #3.
-S, R = map(int, input().split())
-print(S + R)
+answer = input("Ответ: ").lower()
+if not (answer == "да" or answer == "нет"):
+    print("Верно")
+else:
+    print("Неверно")

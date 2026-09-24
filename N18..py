@@ -1,7 +1,10 @@
 #18.
-hectare_m2 = 10000
-height_m = 0.01
-volume_m3 = hectare_m2 * height_m
-volume_liters = volume_m3 * 1000
-
-print(volume_liters)
+A, B = map(int, input().split("x"))
+C, D, E = map(int, input().split("x"))
+if ((C <= A and D <= B) or
+    (C <= B and D <= A) or
+    (C <= A and E <= B) or
+    (C <= B and E <= A) or (D <= A and E <= B) or (D <= B and E <= A)):
+    print("да")
+else:
+    print("нет")
