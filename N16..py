@@ -1,14 +1,11 @@
 #16.
-pin = input()
-if len(pin) != 4:
-    print("ERROR")
+n = int(input())
 
-elif pin[0] == pin[1] or pin[0] == pin[2] or pin[0] == pin[3]  or pin[1] == pin[2] \
-        or pin[1] == pin[3] or pin[2] == pin[3]:
-    print("ERROR")
+for number in range(2, n + 1):
+    sum_divisors = 0
+    for divisor in range(1, number // 2 + 1):
+        if number % divisor == 0:
+            sum_divisors += divisor
 
-elif 1900 <= int(pin) <= 2050:
-    print("ERROR")
-
-else:
-    print("OK")
+    if sum_divisors == number:
+        print(number)

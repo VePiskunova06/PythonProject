@@ -1,22 +1,5 @@
 #13.
-height = float(input())
-weight = float(input())
+n = int(input())
 
-height = height / 100
-
-bmi = weight / (height ** 2)
-
-if bmi < 16:
-    print("выраженный дефицит массы тела")
-elif bmi < 18.5:
-    print("недостаточная масса тела")
-elif bmi < 25:
-    print("норма")
-elif bmi < 30:
-    print("избыточная масса тела")
-elif bmi < 35:
-    print("ожирение первой степени")
-elif bmi < 40:
-    print("ожирение второй степени")
-else:
-    print("ожирение третьей степени")
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * i)

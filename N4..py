@@ -1,10 +1,6 @@
 #4.
-score = input("Введите счёт: ")
-team1, team2 = map(int, score.split(":"))
-
-if team1 > team2:
-    print(1)
-elif team2 > team1:
-    print(2)
-else:
-    print(0)
+x = int(input())
+summ = 0
+for i in range(1, x + 1):
+    summ = summ + i
+print(summ)

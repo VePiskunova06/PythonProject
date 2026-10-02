@@ -1,7 +1,9 @@
 #6.
-year = int(input())
+N = int(input())
+subscribers = 10
+month = 1
 
-if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
-    print(366)
-else:
-    print(365)
+while subscribers <= N:
+    subscribers *= 2
+    month += 1
+print(month)

@@ -1,8 +1,5 @@
 #2.
-name = input("Имя персонажа: ")
-name = name.lower()
-answers = ["джеймс бонд", "007", "агент 007"]
-if name in answers:
-    print("верно")
-else:
-    print("неверно")
+s = input()
+for i in range(len(s)):
+    if i % 2 == 1:
+        print(s[i], end="")

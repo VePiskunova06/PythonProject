@@ -1,15 +1,11 @@
 #11.
-xc = int(input("xc = "))
-yc = int(input("yc = "))
-r = int(input("r = "))
-x = int(input("x = "))
-y = int(input("y = "))
+best = 0
 
-d = (x - xc) ** 2 + (y - yc) ** 2
+while True:
+    score = int(input())
+    if score == -1:
+        break
+    if score > best:
+        best = score
 
-if d < r ** 2:
-    print("Точка внутри окружности")
-elif d == r ** 2:
-    print("Точка лежит на окружности")
-else:
-    print("Точка вне окружности")
+print(best)

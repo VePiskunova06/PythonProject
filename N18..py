@@ -1,10 +1,9 @@
 #18.
-A, B = map(int, input().split("x"))
-C, D, E = map(int, input().split("x"))
-if ((C <= A and D <= B) or
-    (C <= B and D <= A) or
-    (C <= A and E <= B) or
-    (C <= B and E <= A) or (D <= A and E <= B) or (D <= B and E <= A)):
-    print("да")
-else:
-    print("нет")
+x = int(input())
+
+count = 0
+for a in range(1, int(x ** 0.5) + 1):
+    for b in range(a, int(x ** 0.5) + 1):
+        if a * a + b * b == x:
+            count += 1
+print(count)

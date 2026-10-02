@@ -1,10 +1,6 @@
 #5.
-kirill, arina, sergey = map(int, input().split())
-best = kirill
-if arina > best:
-    best = arina
-
-if sergey > best:
-    best = sergey
-
-print(best)
+N = int(input())
+a = 1
+while a ** 3 <= N:
+    print(a ** 3, end=" ")
+    a += 1

@@ -1,10 +1,7 @@
 #12.
-n = int(input())
-if n % 10 == 1 and n % 100 != 11:
-    print(n, "попугай")
+x = int(input())
+sum = 0
 
-elif (n % 10 == 2 or n % 10 == 3 or n % 10 == 4) and not (12 <= n % 100 <= 14):
-    print(n, "попугая")
-
-else:
-    print(n, "попугаев")
+for i in range(1, x + 1):
+    sum += i
+    print(sum)
