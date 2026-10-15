@@ -1,8 +1,9 @@
 #1.
-print("какие два слова передал первой радиограммой Александр Попов?")
-word_1 = input("Первое слово: ")
-word_2 = input("второе слово: ")
-if word_1 == "генрих" and word_2 == "герц":
-    print("верно")
-else:
-    print("неверно")
+file = open("input.txt", "r", encoding="utf-8")
+text = file.read()
+file.close()
+
+text = text.upper()
+file = open("output.txt", "w", encoding="utf-8")
+file.write(text)
+file.close()

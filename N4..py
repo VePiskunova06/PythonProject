@@ -1,10 +1,9 @@
 #4.
-score = input("Введите счёт: ")
-team1, team2 = map(int, score.split(":"))
+file = open("input.txt", "r", encoding="utf-8")
+result = open("output.txt", "w", encoding="utf-8")
+for line in file:
+    if len(line.rstrip("\n")) > 20:
+        result.write(line)
 
-if team1 > team2:
-    print(1)
-elif team2 > team1:
-    print(2)
-else:
-    print(0)
+file.close()
+result.close()

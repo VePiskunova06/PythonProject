@@ -1,11 +1,10 @@
 #7.
-n = int(input())
-a = n // 1000
-b = n // 100 % 10
-c = n // 10 % 10
-d = n % 10
+file = open("input.txt", "r", encoding="utf-8")
+lines = file.readlines()
+file.close()
 
-if a == d and b == c:
-    print("настоящее")
-else:
-    print("кривое")
+file = open("input.txt", "w", encoding="utf-8")
+for i in lines:
+    if int(i) != 100:
+        file.write(i)
+file.close()

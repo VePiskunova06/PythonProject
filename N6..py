@@ -1,7 +1,16 @@
 #6.
-year = int(input())
+file = open("input.txt", "r", encoding="utf-8")
+result = open("output.txt", "w", encoding="utf-8")
+try:
+    n = int(file.readline())
+    lines = file.readlines()
 
-if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
-    print(366)
-else:
-    print(365)
+    if len(lines) == n:
+        result.write("YES")
+    else:
+        result.write("NO")
+
+except ValueError:
+    result.write("ERROR")
+file.close()
+result.close()

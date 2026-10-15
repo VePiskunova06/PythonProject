@@ -1,10 +1,18 @@
 #5.
-kirill, arina, sergey = map(int, input().split())
-best = kirill
-if arina > best:
-    best = arina
+file = open("input.txt", "r", encoding="utf-8")
+result = open("output.txt", "w", encoding="utf-8")
 
-if sergey > best:
-    best = sergey
+try:
+    a = int(file.readline())
+    b = int(file.readline())
+    c = int(file.readline())
 
-print(best)
+    answer = a / b + c
+    result.write(str(answer))
+
+except ValueError:
+    result.write("data error")
+except ZeroDivisionError:
+    result.write("division by 0")
+file.close()
+result.close()

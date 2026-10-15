@@ -1,20 +1,15 @@
 #8.
-name = input("Здравствуйте! Как Вас зовут? ")
+file = open("input.txt", "r", encoding="utf-8")
+result = open("output.txt", "w", encoding="utf-8")
 
-print("Очень приятно,", name + "! Меня зовут Марк.")
+months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+for days in months:
+    total = 0
+    for i in range(days):
+        steps = int(file.readline())
+        total = total + steps
 
-age = int(input("Сколько Вам лет? "))
-
-if age < 78:
-    print("Да,", name + ", я старше Вас на", 78 - age, "лет.")
-elif age > 78:
-    print("Да,", name + ", Вы старше меня на", age - 78, "лет.")
-else:
-    print(name + ", мы с Вами одного возраста.")
-
-answer = input("Вам нравится программировать? ").lower()
-
-if answer == "да":
-    print("Превосходно! Уверен, у Вас получится написать множество полезных и хороших программ.")
-else:
-    print("Жаль. Я думал, Вы сможете написать интересную программу для меня.")
+    average = total / days
+    result.write(str(average) + "\n")
+file.close()
+result.close()
